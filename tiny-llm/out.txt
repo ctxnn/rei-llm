@@ -1,0 +1,59 @@
+
+step    50 | loss 2.2827 | 2.7s
+step   100 | loss 1.4449 | 2.5s
+eval | train 1.4646 | val 1.4479
+saved checkpoint: runs/min-gpt/model_best.pt
+
+================ SAMPLE ================
+ लखि प्रीति बिसेषी॥
+गुरहि प्रनामु मनहि मन कीन्हुकाैजसुद्8 ालंो भापुईत िष॥हिब स॥रच  असकाीलगपुबह॥
+ਗी मर ीिखसइ रगाी न
+हनतदि ि  ि ॖहऋु ॥
+=======================================
+
+step   150 | loss 1.3253 | 4.8s
+step   200 | loss 1.2860 | 2.6s
+eval | train 1.2836 | val 1.2661
+saved checkpoint: runs/min-gpt/model_best.pt
+
+================ SAMPLE ================
+ाई॥
+गै जननी सिसु पहिं भयभीता। देखा बाल तहाँ पुनि
+नदमम ारा चभैपेखन ामह। ाा थीधस ि ह भदु ाहनभरर ंोतिा॥ंिी ीरर त८कंक। ँ   दि
+ःतडोइद॥
+=======================================
+
+step   250 | loss 1.2277 | 4.9s
+step   300 | loss 1.1850 | 2.6s
+eval | train 1.1784 | val 1.1664
+saved checkpoint: runs/min-gpt/model_best.pt
+
+================ SAMPLE ================
+स भाऊ। तेहिं तस देखेउ कोसलराऊ॥
+दो0-राजत राज समाज मरहोम ंिइे ृज।ुल सुपमतु नगल ता ीमद्भरॏ। दमि ँपुहँूइतह5॥
+हु सबार।  सपसददेरािस
+ाॿ कौ२नन खिा
+=======================================
+
+step   350 | loss 1.1266 | 4.9s
+step   400 | loss 1.1096 | 2.5s
+eval | train 1.1145 | val 1.1038
+saved checkpoint: runs/min-gpt/model_best.pt
+
+================ SAMPLE ================
+ समीप बोलाइ।
+सीता मातु सनेह बस बचन कहइ बिलखाइ॥255॥
+
+हुं रव ेजमि जाहहि िकाव दु॥े रसरर ेधउ ्अमहं ुबधह मि पि सपहह॥ अनिूि आभना। जनिाचि ुससस नहाऊ॥
+त ुब्खक
+=======================================
+
+
+>>> python sample.py --ckpt /Users/chiragtaneja/Codes/repos/rei-llm/tiny-llm/runs/min-gpt/model_best.pt --tokens 200 --prompt 'Once upon a time '
+Once upon a time गसुबेे दीउ पो8( सवएह॥
+
+यसकअद-धाहाुे।
+खोोद सग ॵे्अछे भ सनून ोदप रवरा। रेलुु
+
+>>> python eval_loss.py --data tiny_hi.txt --ckpt /Users/chiragtaneja/Codes/repos/rei-llm/tiny-llm/runs/min-gpt/model_best.pt --iters 50 --block_size 128
+val loss: 1.1018
