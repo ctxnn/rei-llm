@@ -1,7 +1,6 @@
-from __future__ import annotations
 import argparse, torch
-from tokenizer import ByteTokenizer
-from model_gpt import GPT
+from tok import ByteTokenizer
+from gpt import GPT
 
 
 def main():

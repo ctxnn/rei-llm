@@ -6,9 +6,9 @@ class ByteDataset:
         self.block_size = block_size 
         data = pathlib.Path(path).read_bytes() # reads the entire dataset as raw bytes
         data = torch.tensor(list(data), dtype = torch.long)
-        n = (len(data)*split)
-        train_data= data[:n]
-        val_data = data[n:]
+        n = int(len(data)*split)
+        self.train = data[:n]
+        self.val = data[n:]
         
     def get_batch(self, which: str, batch_size: int, device: torch.device):
         buf = self.train if which == 'train' else self.val # the entire text file as bytes
